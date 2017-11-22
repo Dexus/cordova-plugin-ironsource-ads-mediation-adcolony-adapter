@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  id="cordova-plugin-ironsource-ads-mediation-adcolony-adapter"
+  version="0.1.0">
+
+  <name>AdColony</name>
+  <description>Cordova/PhoneGap Plugin for AdColony Ads</description>
+  <author>Josef Fröhle</author>
+  <license>MIT</license>
+  <keywords>dexus,adcolony,adapter,ironsource,ads,mediation</keywords>
+  <repo>https://github.com/Dexus/cordova-plugin-ironsource-ads-mediation-adcolony-adapter.git</repo>
+  <issue>https://github.com/Dexus/cordova-plugin-ironsource-ads-mediation-adcolony-adapter/issues</issue>
+
+  <engines>
+    <engine name="cordova" version=">=6.4.0" />
+  </engines>
+
+  <dependency id="cordova-plugin-ironsource-ads"/>
+
+  <!-- android -->
+  <platform name="android">
+
+    <config-file target="AndroidManifest.xml" parent="/manifest/application">
+      <activity
+        android:name="com.adcolony.sdk.AdColonyInterstitialActivity"
+        android:configChanges="keyboardHidden|orientation|screenSize"
+        android:hardwareAccelerated="true"/>
+      <activity
+        android:name="com.adcolony.sdk.AdColonyAdViewActivity"
+        android:configChanges="keyboardHidden|orientation|screenSize"
+        android:hardwareAccelerated="true"/>
+    </config-file>
+
+    <config-file target="AndroidManifest.xml" parent="/*">
+      <uses-permission android:name="android.permission.INTERNET" />
+      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    </config-file>
+
+    <framework src="src/android/adapter.gradle" custom="true" type="gradleReference"/>
+
+  </platform>
+
+  <!-- ios -->
+  <platform name="ios">
+    <framework src="CoreFoundation.framework" weak="true"/>
+    <framework src="Foundation.framework" />
+    <framework src="AVFoundation.framework" />
+    <framework src="CoreMedia.framework" />
+    <framework src="CoreVideo.framework" />
+    <framework src="QuartzCore.framework" />
+    <framework src="SystemConfiguration.framework" />
+    <framework src="CoreGraphics.framework" />
+    <framework src="CFNetwork.framework" />
+    <framework src="MobileCoreServices.framework" />
+    <framework src="libz.dylib" />
+    <framework src="StoreKit.framework" />
+    <framework src="AdSupport.framework" />
+    <framework src="CoreLocation.framework" />
+    <framework src="CoreTelephony.framework" />
+    <framework src="Security.framework" />
+
+    <!-- required cordova 6.4.0 or higher -->
+    <framework src="IronSourceAdColonyAdapter" type="podspec" spec="4.0.0.3"/>
+
+  </platform>
+
+</plugin>
