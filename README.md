@@ -1,0 +1,1 @@
+# cordova-plugin-ironsource-ads-mediation-adcolony-adapter
