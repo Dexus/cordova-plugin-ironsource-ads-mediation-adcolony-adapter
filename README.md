@@ -2,6 +2,8 @@
 # IronSource Ads Mediation AdColony - Cordova Plugin
 # <img src="https://github.com/charlesbodman/cordova-plugin-ironsource-ads/blob/master/images/ironsource_logo.png?raw=true" width="500"  />
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Dexus/cordova-plugin-ironsource-ads-mediation-adcolony-adapter.svg)](https://greenkeeper.io/)
+
 <p align="left">
 <img src="https://img.shields.io/badge/State-In%20Development-yellowgreen.svg?style=flat-square">
 <img src="https://img.shields.io/badge/Support%20for%20IronSource%20Framework%20Version-6.7.3-blue.svg?style=flat-square">
